@@ -1,0 +1,7 @@
+{
+  "name": "claculadora",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+      
+    <ion-title class="fondo">
+   
+     
+        
+      <button ion-item (click)="CerrarSesion()">
+            <ion-icon name="person" color="#f4f4f4" item-start></ion-icon>
+            Cerrar Sesion
+          </button>
+
+       
+
+
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  class="masters" >
+
+    <button ion-button (click)="createEmpleado()" color="secondary"  round>nuevo empleado</button>
+<p center>lista de empleados</p>
+
+
+  <ion-list lines  class="masters">
+    <ion-item *ngFor="let empleado of empleados" color="secondary">
+    
+       
+      {{ empleado.nombre }} 
+      {{ empleado.apellido }}
+   
+     <button (click)="irDetalle(empleado.cedula)">ver mas</button>
+    </ion-item>
+   
+  </ion-list>
+  
+
+</ion-content>

@@ -1,0 +1,45 @@
+
+<ion-header>
+
+
+  <ion-navbar>
+    <ion-title class="fondo">
+      <img src="">
+      <p class="titulo">DATOS DEL EMPLEADO</p>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="masters" *ngIf="show">
+    
+      
+  <ion-list>
+
+    <ion-item no-lines>
+      <ion-label floating>CEDULA</ion-label>
+      <ion-input   type="number" [(ngModel)] ="empleado.cedula"></ion-input>
+    </ion-item>
+      <ion-item>
+      <ion-label floating>Nombre </ion-label>
+      <ion-input type="text"  [(ngModel)] ="empleado.nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>APELLIDOS</ion-label>
+      <ion-input type="text"  [(ngModel)] ="empleado.apellido"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>CARGO</ion-label>
+      <ion-input type="text"  [(ngModel)] ="empleado.cargo"></ion-input>
+    </ion-item>
+
+    <div padding>
+      <button ion-button block (click)="agregarEmpleado()">Guardar </button>
+        <button *ngIf='cedula != 0' ion-button block (click)="eliminarEmpleado(empleado)" color="danger">eliminar</button>
+    </div>
+
+  </ion-list>
+</ion-content>
